@@ -1,0 +1,7 @@
+{
+  "cSpell.words": ["generationtime"],
+  "files.exclude": {
+    "**/*.g.dart": true,
+    "**/*.freezed.dart": true
+  }
+}
