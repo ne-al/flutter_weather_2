@@ -18,6 +18,7 @@ class CurrentWeather with _$CurrentWeather {
     required double precipitation,
     required double rain,
     required int weather_code,
+    required double wind_speed_10m,
   }) = _CurrentWeather;
 
   factory CurrentWeather.fromJson(Map<String, dynamic> data) =>

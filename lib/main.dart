@@ -19,6 +19,7 @@ class MyApp extends StatelessWidget {
       title: 'Weather App 2.0',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        fontFamily: 'Oswald',
         colorScheme: ColorScheme.fromSeed(
           seedColor: Colors.deepPurple,
           brightness: Brightness.dark,

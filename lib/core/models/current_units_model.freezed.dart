@@ -29,6 +29,7 @@ mixin _$CurrentUnits {
   String get precipitation => throw _privateConstructorUsedError;
   String get rain => throw _privateConstructorUsedError;
   String get weather_code => throw _privateConstructorUsedError;
+  String get wind_speed_10m => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -51,7 +52,8 @@ abstract class $CurrentUnitsCopyWith<$Res> {
       String is_day,
       String precipitation,
       String rain,
-      String weather_code});
+      String weather_code,
+      String wind_speed_10m});
 }
 
 /// @nodoc
@@ -76,6 +78,7 @@ class _$CurrentUnitsCopyWithImpl<$Res, $Val extends CurrentUnits>
     Object? precipitation = null,
     Object? rain = null,
     Object? weather_code = null,
+    Object? wind_speed_10m = null,
   }) {
     return _then(_value.copyWith(
       time: null == time
@@ -114,6 +117,10 @@ class _$CurrentUnitsCopyWithImpl<$Res, $Val extends CurrentUnits>
           ? _value.weather_code
           : weather_code // ignore: cast_nullable_to_non_nullable
               as String,
+      wind_speed_10m: null == wind_speed_10m
+          ? _value.wind_speed_10m
+          : wind_speed_10m // ignore: cast_nullable_to_non_nullable
+              as String,
     ) as $Val);
   }
 }
@@ -135,7 +142,8 @@ abstract class _$$CurrentUnitsImplCopyWith<$Res>
       String is_day,
       String precipitation,
       String rain,
-      String weather_code});
+      String weather_code,
+      String wind_speed_10m});
 }
 
 /// @nodoc
@@ -158,6 +166,7 @@ class __$$CurrentUnitsImplCopyWithImpl<$Res>
     Object? precipitation = null,
     Object? rain = null,
     Object? weather_code = null,
+    Object? wind_speed_10m = null,
   }) {
     return _then(_$CurrentUnitsImpl(
       time: null == time
@@ -196,6 +205,10 @@ class __$$CurrentUnitsImplCopyWithImpl<$Res>
           ? _value.weather_code
           : weather_code // ignore: cast_nullable_to_non_nullable
               as String,
+      wind_speed_10m: null == wind_speed_10m
+          ? _value.wind_speed_10m
+          : wind_speed_10m // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -212,7 +225,8 @@ class _$CurrentUnitsImpl extends _CurrentUnits {
       required this.is_day,
       required this.precipitation,
       required this.rain,
-      required this.weather_code})
+      required this.weather_code,
+      required this.wind_speed_10m})
       : super._();
 
   factory _$CurrentUnitsImpl.fromJson(Map<String, dynamic> json) =>
@@ -236,10 +250,12 @@ class _$CurrentUnitsImpl extends _CurrentUnits {
   final String rain;
   @override
   final String weather_code;
+  @override
+  final String wind_speed_10m;
 
   @override
   String toString() {
-    return 'CurrentUnits(time: $time, interval: $interval, temperature_2m: $temperature_2m, relative_humidity_2m: $relative_humidity_2m, apparent_temperature: $apparent_temperature, is_day: $is_day, precipitation: $precipitation, rain: $rain, weather_code: $weather_code)';
+    return 'CurrentUnits(time: $time, interval: $interval, temperature_2m: $temperature_2m, relative_humidity_2m: $relative_humidity_2m, apparent_temperature: $apparent_temperature, is_day: $is_day, precipitation: $precipitation, rain: $rain, weather_code: $weather_code, wind_speed_10m: $wind_speed_10m)';
   }
 
   @override
@@ -261,7 +277,9 @@ class _$CurrentUnitsImpl extends _CurrentUnits {
                 other.precipitation == precipitation) &&
             (identical(other.rain, rain) || other.rain == rain) &&
             (identical(other.weather_code, weather_code) ||
-                other.weather_code == weather_code));
+                other.weather_code == weather_code) &&
+            (identical(other.wind_speed_10m, wind_speed_10m) ||
+                other.wind_speed_10m == wind_speed_10m));
   }
 
   @JsonKey(ignore: true)
@@ -276,7 +294,8 @@ class _$CurrentUnitsImpl extends _CurrentUnits {
       is_day,
       precipitation,
       rain,
-      weather_code);
+      weather_code,
+      wind_speed_10m);
 
   @JsonKey(ignore: true)
   @override
@@ -302,7 +321,8 @@ abstract class _CurrentUnits extends CurrentUnits {
       required final String is_day,
       required final String precipitation,
       required final String rain,
-      required final String weather_code}) = _$CurrentUnitsImpl;
+      required final String weather_code,
+      required final String wind_speed_10m}) = _$CurrentUnitsImpl;
   const _CurrentUnits._() : super._();
 
   factory _CurrentUnits.fromJson(Map<String, dynamic> json) =
@@ -326,6 +346,8 @@ abstract class _CurrentUnits extends CurrentUnits {
   String get rain;
   @override
   String get weather_code;
+  @override
+  String get wind_speed_10m;
   @override
   @JsonKey(ignore: true)
   _$$CurrentUnitsImplCopyWith<_$CurrentUnitsImpl> get copyWith =>

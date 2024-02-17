@@ -17,6 +17,7 @@ _$CurrentUnitsImpl _$$CurrentUnitsImplFromJson(Map<String, dynamic> json) =>
       precipitation: json['precipitation'] as String,
       rain: json['rain'] as String,
       weather_code: json['weather_code'] as String,
+      wind_speed_10m: json['wind_speed_10m'] as String,
     );
 
 Map<String, dynamic> _$$CurrentUnitsImplToJson(_$CurrentUnitsImpl instance) =>
@@ -30,4 +31,5 @@ Map<String, dynamic> _$$CurrentUnitsImplToJson(_$CurrentUnitsImpl instance) =>
       'precipitation': instance.precipitation,
       'rain': instance.rain,
       'weather_code': instance.weather_code,
+      'wind_speed_10m': instance.wind_speed_10m,
     };
